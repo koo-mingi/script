@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header1">header1</h1>
+    <h1 id="header2">header2</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 끌고온 소스가 위에 있어야 $를 못 찾는 에러가 안 뜬다. -->
+
+    <script>
+      // 문서객체가 id가 부여된 상태라면?
+      let header1 = $("#header1");
+      console.log(header1);
+      console.log(header1.text()); // 텍스트 노드 값 가져오기
+
+      //header2의 텍스트 노드 값 변경
+      let header2 = $("#header2");
+      // header2.innerText = "with getElementById";
+      header2.html("<p style='color:red'>with getElementById()</p>");
+    </script>
+  </body>
+</html>

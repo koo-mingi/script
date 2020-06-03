@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+      <li>List item5</li>
+    </ul>
+    <ul>
+      <li>List item6</li>
+      <li>List item7</li>
+      <li>List item8</li>
+      <li>List item9</li>
+      <li>List item10</li>
+    </ul>
+    <script>
+      // 부여된 id가 없을 때는? 태그이름으로 찾기
+      let ul = document.getElementsByTagName("ul");
+      console.log(ul);
+      console.log(ul[0].children[1]);
+      console.log(ul[0].children[1].innerText);
+      console.log(ul[0].children); // 첫번째 ul
+
+      //첫번째 ul 가져와서 자식요소의 텍스트 노드 출력하기
+      let firstChildren = ul[0].children;
+
+      for (var i = 0; i < firstChildren.length; i++) {
+        console.log(firstChildren[i].innerText);
+      }
+    </script>
+  </body>
+</html>

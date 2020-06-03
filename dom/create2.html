@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //스크립트 문 안에서 문서요소를 생성해서 삽입
+      //img 태그 <img src='' alt=''>
+      let img = document.createElement("img"); // <img> 태그 생성
+
+      // 방법 1
+      img.setAttribute("src", "dog.jpg"); // 속성 추가하기
+      img.setAttribute("alt", "강아지"); // 속성 추가하기
+
+      // 방법 2 : 직접 넣어주기
+      img.src = "dog.jpg";
+      img.alt = "강아지";
+
+      document.body.appendChild(img); // 현재 문서에 body태그안에 자식요소로 붙여넣기 해주기
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- onblur : 내용과 상관없이 포커스만 일으면 무조건 발생
+         onchange : 내용이 변경되고 포커스를 잃을 경우 발생
+        -->
+    <div>
+      <input type="text" onblur="test()" />
+    </div>
+    <div>
+      <input type="text" onchange="test()" />
+    </div>
+    <script>
+      function test() {
+        alert("onblur");
+      }
+    </script>
+  </body>
+</html>

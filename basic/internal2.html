@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        // 위에서부터 순차적으로 읽어서 문서를 그려내기 때문에 "hw"를 찾아오라고 할 때 아직 존재하지 않기 때문에 에러가 난다.
+        // 따라서, 문서가 다 그려지고 실행시키라는 의미로 onload를 사용한다.
+        var hw = document.getElementById("hw");
+        hw.addEventListener("click", function () {
+          alert("hello world");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <!--스크립트 위치-->
+    <h3>헤딩 태그</h3>
+    <input type="text" value="Hello World" id="hw" />
+    <!-- <script>
+      var hw = document.getElementById("hw");
+      hw.addEventListener("click", function () {
+        alert("hello world");
+      });
+    </script> -->
+  </body>
+</html>

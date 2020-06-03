@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 새창으로 이동 -->
+    <input
+      type="button"
+      value="클릭"
+      onclick="window.open('http://www.google.com')"
+    />
+    <!-- 내 경로로 이동 -->
+    <input
+      type="button"
+      value="내 경로"
+      onclick="window.open('history.html')"
+    />
+
+    <!-- 현재 창에 구글 띄움 -->
+    <input
+      type="button"
+      value="현재 창에 띄움"
+      onclick="window.open('http://www.google.com','_self')"
+    />
+
+    <!-- 팝업창처럼 띄우기 -->
+    <input
+      type="button"
+      value="팝업창"
+      onclick="window.open('http://www.google.com','_blank','width=300,height=300')"
+    />
+    <!-- status 없음-->
+    <input
+      type="button"
+      value="팝업창 status"
+      onclick="window.open('http://www.google.com','_blank','width=300,height=300,status=no')"
+    />
+    <!-- 스크롤바 없음-->
+    <input
+      type="button"
+      value="팝업창 스크롤바 띄우는 위치"
+      onclick="window.open('http://www.google.com','_blank','width=300,height=300,status=no,scrollbars=no,left=500,top=500')"
+    />
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="header1">header1</h1>
+    <h1 class="header1">header2</h1>
+    <h1 class="header1">header3</h1>
+    <h1 class="header1">header4</h1>
+    <h1 class="header1">header5</h1>
+    <h1 class="header1">header6</h1>
+    <!-- <h1 id="header2" onclick="test()">header2</h1> -->
+    <script>
+      // 문서객체가 클래스가 부여된 상태라면?
+      let header1 = document.getElementsByClassName("header1");
+      console.log(header1);
+      console.log(header1[0]);
+      console.log(header1.item(0));
+      console.log(header1[0].innerText); // 텍스트 노드 값 가져오기
+
+      for (var i = 0; i < header1.length; i++) {
+        console.log(header1.item(i));
+      }
+    </script>
+  </body>
+</html>

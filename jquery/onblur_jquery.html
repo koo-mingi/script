@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- onblur : 내용과 상관없이 포커스만 잃으면 무조건 발생
+         onchange : 내용이 변경되고 포커스를 잃을 경우 발생
+        -->
+    <div>
+      <input type="text" name="text1" />
+    </div>
+    <div>
+      <input type="text" name="text2" />
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 끌고온 소스가 위에 있어야 $를 못 찾는 에러가 안 뜬다. -->
+
+    <script>
+      $(function () {
+        $("input").blur(function () {
+          $(this).css("background-color", "orange");
+        });
+        $("input").focus(function () {
+          $(this).css("background-color", "white");
+        });
+      });
+    </script>
+  </body>
+</html>

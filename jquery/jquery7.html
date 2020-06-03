@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <input type="password" name="" id="" />
+    <input type="radio" name="" id="" />
+    <input type="checkbox" name="" id="" />테스트
+    <button type="button">클릭</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 끌고온 소스가 위에 있어야 $를 못 찾는 에러가 안 뜬다. -->
+    <script>
+      $(function () {
+        // 문서 실행 시 무조건 바꾸어 줌
+        $("[type='text']").val("Hello Jquery!!");
+
+        //체크박스에 체크가 되도록 하기
+        $("[type='checkbox']").attr("checked", "checked");
+
+        // attr : 속성에 속성값 부여할 때에 많이 사용하는 함수.
+      });
+
+      //버튼이 클릭되면 password 값 가져와서 콘솔에 출력
+      $("button").click(function () {
+        console.log($("[type='password']").val());
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+      h1 {
+        font-size: 20px;
+        color: aquamarine;
+      }
+    </style> -->
+  </head>
+  <body>
+    <h1 id="header">header1</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 끌고온 소스가 위에 있어야 $를 못 찾는 에러가 안 뜬다. -->
+
+    <script>
+      $(function () {
+        //Header1 요소의 스타일 변경하기
+        let h1 = $("#header");
+
+        h1.css("color", "blue");
+        h1.css("border", "1px solid red");
+        h1.css("padding", "10px");
+      });
+    </script>
+  </body>
+</html>
