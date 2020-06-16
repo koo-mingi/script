@@ -27,9 +27,9 @@
       const regexp = /Ajax/;
 
       document.getElementById("exec").innerText = regexp.exec(content);
-      document.getElementById("match").innerText = regexp.exec(content);
-      document.getElementById("test").innerText = regexp.exec(content);
-      document.getElementById("search").innerText = regexp.exec(content);
+      document.getElementById("match").innerText = content.match(regexp);
+      document.getElementById("test").innerText = regexp.test(content);
+      document.getElementById("search").innerText = content.search(regexp);
     </script>
   </body>
 </html>

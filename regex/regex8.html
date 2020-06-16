@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ( )는 그룹화 및 각 단어를 캡쳐링(보관)해놓음
+      // 그래서 John따로 Smith 따로 보관해둠.
+      const regexp = /(\w+)\s(\w+)/;
+      //const regexp = /\w+\s\w+/;
+      let str = "John Smith";
+      console.log("=== match ===");
+      console.log(str.match(regexp));
+      console.log();
+      let newstr = str.replace(regexp, "$2, $1"); // $2 : 캡쳐해놓은 2번값. $1 : 캡쳐해놓은 1번값.
+      console.log(newstr); // Smith, John
+    </script>
+  </body>
+</html>

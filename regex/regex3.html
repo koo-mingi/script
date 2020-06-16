@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere assumenda
+      fugit, possimus cupiditate neque quia explicabo dolorem nostrum quo
+      incidunt sint. Animi reprehenderit optio nihil obcaecati placeat sapiente
+      dolorem adipisci? Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+    </p>
+    <script>
+      let p1 = document.querySelector("p").innerText;
+
+      console.log("--- i 플래그 ----");
+      console.log(p1.match(/ipsum/i));
+      console.log("");
+
+      console.log("--- gi 플래그 ----");
+      console.log(p1.match(/ipsum/gi));
+      console.log("");
+
+      console.log("--- gm 플래그 ----");
+      console.log(p1.match(/$/gm));
+      console.log("");
+    </script>
+  </body>
+</html>
