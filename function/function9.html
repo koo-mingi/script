@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 클로저 : iief(즉시 호출하는 함수 표현식)
+      const message = (function () {
+        // 외부 변수로 함수에 연결
+        const secret = "I'm a secret!"; // 유효기간이 끝난 변수
+        return `The secret is ${secret.length} characters long.`; // return으로 변수값을 넘김
+      })();
+      console.log(message);
+    </script>
+  </body>
+</html>

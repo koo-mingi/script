@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let globalFunc; //global scope
+      {
+        // block scope
+        let blockVar = "a"; // 외부에서는 죽은 변수지만, 참조가 됨...
+        globalFunc = function () {
+          console.log(blockVar);
+        };
+      }
+      globalFunc();
+    </script>
+  </body>
+</html>
